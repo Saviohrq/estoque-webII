@@ -24,37 +24,11 @@ app.use(bodyParser.json());
 
 /**ROTAS DO SISTEMA */
 app.get('/', (req, res) => {
+    res.status(200).render('admin/index');
+});
 
-    var aluno = {
-        nome: 'Fulano',
-        nota: 7.5
-    }
-
-    res.status(200).render('admin/index', {aluno});
-})
-
-app.get('/contato', (req, res) => {
-    res.status(200).render('admin/contato');
-})
-
-app.get('/cadastro', (req, res) => {
-    res.status(200).render('produto/cadastro');
-})
-
-app.get('/produto', (req, res) => {
-    res.status(200).render('produto/index');
-})
-
-app.post('/cadastro', (req, res) => {
-    var produto = {
-        descricao: req.body.descricao,
-        estoque: req.body.estoque,
-        preco: req.body.preco,
-        status: 1,
-        foto: '/img/semfoto.png'
-    }
-    res.render('produto/detalhe', {produto});
-})
+import produto from './routes/produtos.js';
+app.use('/produto', produto);
 
 app.listen(3000, () => {
     console.log("Servidor rodando em http://localhost:3000/");
