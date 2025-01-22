@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
     res.status(200).render('admin/index');
 });
 
-import produto from './routes/produtos.js';
+import produto from './routes/produto.js';
 app.use('/produto', produto);
 
 app.listen(3000, () => {

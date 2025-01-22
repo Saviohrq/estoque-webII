@@ -2,13 +2,26 @@ import Produto from "../models/Produto.js"
 
 class ProdutoController{
 
-    index = (req, res) => {
-        const produtos = Produto.findAll();
-        res.render('produto/index');
+    index = async(req, res) => {
+        const produtos = await Produto.findAll();
+        res.render('produto/index', {produtos: produtos});
     }
 
-    cadastro = (req, res) => {
-        res.render('produto/cadastro');
+    cadastrar = (req, res) => {
+        res.render('produto/cadastrar');
+    }
+
+    salvar = (req, res) => {
+        let produto = {
+            descricao: req.body.descricao,
+            preco: req.body.preco,
+            estoque: req.body.estoque,
+            status: 1
+        }
+        
+        Produto.create(produto).then(() => {
+            res.redirect('/produto')
+        })
     }
 
 }

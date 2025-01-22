@@ -18,13 +18,13 @@
   "bugs": "",
   "keywords": [],
   "author": {
-    "name": "",
-    "email": "",
+    "name": "Savio Henrique",
+    "email": "saviobarradas@gmail.com",
     "url": ""
   },
   "contributors": [],
   "scripts": {
-    "dev": "node --watch index.js",
+    "dev": "npm nodemon index.js",
     "test": ""
   },
   "dependencies": {
