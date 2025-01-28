@@ -1,0 +1,26 @@
+<div>
+    <nav>
+        <div>
+            <h3>Pessoas</h3>
+            
+        </div>
+    </nav>
+</div>
+
+
+<table class="table table-stripped">
+    <tr>
+        <th>CPF</th>
+        <th>NOME</th>
+        <th>E-MAIL</th>
+        <th>TELEFONE</th>
+    </tr>
+    {{#each pessoas}}
+        <tr>
+            <td>{{cpf}}</td>
+            <td>{{nome}}</td>
+            <td>{{email}}</td>
+            <td>{{telefone}}</td>
+        </tr>
+    {{/each}}
+</table>
