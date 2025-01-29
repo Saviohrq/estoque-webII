@@ -33,6 +33,9 @@ app.use('/produto', produto);
 import pessoa from './routes/pessoa.js'
 app.use('/pessoa', pessoa)
 
+import usuario from './routes/usuario.js'
+app.use('/usuario', usuario)
+
 app.listen(3000, () => {
     console.log("Servidor rodando em http://localhost:3000/");
 });
