@@ -1,7 +1,19 @@
 <div class="col-md-6 mx-auto shadow p-3">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <h1 class="navbar-brand">Cadastrar Usuários</h1>
+
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="btn btn-sm btn-secondary" href="/"><i class="fa-solid fa-angle-left"></i> Voltar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <form method="post" action="/usuario/salvar">
         <fieldset>
-            <legend>CADASTRO DE USUÁRIO</legend>
+            
             <label for="">NOME DE USUÁRIO</label>
             <input class="form-control" type="text" name="username">
             <label for="">SENHA</label>
@@ -14,10 +26,10 @@
             <label for="">PESSOA</label>
             <select name="pessoa_id" class="form-select">
                 {{#each pessoas}}
-                    <option value="{{id}}">{{nome}}</option>
+                <option value="{{id}}">{{nome}}</option>
                 {{/each}}
             </select>
-            <button class="btn btn-success" type="submit">SALVAR</button>
+            <button class="btn btn-success mt-3" type="submit">SALVAR</button>
         </fieldset>
     </form>
 </div>

@@ -1,0 +1,33 @@
+<div class="col-md-6 mx-auto shadow p-3">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <h1 class="navbar-brand">Cadastrar Clientes</h1>
+
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="btn btn-sm btn-secondary" href="/pessoa" ><i class="fa-solid fa-angle-left"></i> Voltar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <form method="post" action="/pessoa/salvar">
+        <fieldset>
+            <legend>Dados do Cliente</legend>
+
+            <label>CPF</label>
+            <input name="cpf" type="text" class="form-control">
+
+            <label>NOME</label>
+            <input name="nome" type="text" class="form-control">
+
+            <label>E-MAIL</label>
+            <input name="email" type="text" class="form-control">
+
+            <label>TELEFONE</label>
+            <input name="telefone" type="text" class="form-control">
+
+            <button type="submit" class="btn btn-success mt-3">Salvar</button>
+        </fieldset>
+    </form>
+</div>
